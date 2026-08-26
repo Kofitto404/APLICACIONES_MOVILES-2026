@@ -8,7 +8,7 @@ open class Persona(
     val nombre: String,
     val rut: Int,
     val dv: Int,
-    val fechaNacimiento: String,
+    val fechaNacimiento: String ,
     val edad: Int
 ) : Informable {
     open fun mostrarInfo(): String {
