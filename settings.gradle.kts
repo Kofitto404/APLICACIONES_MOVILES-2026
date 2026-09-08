@@ -26,3 +26,5 @@ rootProject.name = "guia3aplicandocolecciones"
 include(":app")
 include(":inventario-productos")
 include(":Tareas")
+include(":ComidaExpress")
+include(":Formativas")
