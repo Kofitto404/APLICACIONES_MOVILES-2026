@@ -1,10 +1,9 @@
 package com.example.comidaexpress
 
-import kotlin.compareTo
-
 fun confirmarPago(monto: Double): Boolean {
     println("Procesando pago de $$monto...")
     Thread.sleep(800)
+    println("Pago procesado!")
     return true
 }
 
@@ -19,17 +18,8 @@ val cliente = Cliente(
     true
 )
 
-val productosValidos = mutableListOf<Producto>()
-val datosPrueba = listOf(
-    Plato("Pastel de Choclo", 6500.0, "Grande"),
-    Plato("Empanada de Pino", 1800.0, "Chica"),
-    Bebida("Pisco Sour", 3200.0, true),
-    Bebida("Mote con Huesillo", 1500.0, false),
-    Plato("Ceviche", -2000.0, "Chica")
-)
-val listaDefinitiva: List<Producto> = productosValidos.also {
-    println("\nSe registraron exitosamente ${it.size} productos en el pedido.")
-}
+
+
 val repartidorAsignado = asignarRepartidor()
 
 // -----------------------------
@@ -45,6 +35,14 @@ fun main() {
         println("Frecuente: $esClienteFrecuente")
         println("=========================")
     }
+    val datosPrueba = listOf(
+        Plato("Pastel de Choclo", 6500.0, "Grande"),
+        Plato("Empanada de Pino", 1800.0, "Chica"),
+        Bebida("Pisco Sour", 3200.0, true),
+        Bebida("Mote con Huesillo", 1500.0, false),
+        Plato("Ceviche", -2000.0, "Chica")
+    )
+    val productosValidos = mutableListOf<Producto>()
 
     for (i in datosPrueba) {
         try {
@@ -52,6 +50,9 @@ fun main() {
         } catch (e: IllegalArgumentException) {
             println("[ERROR AL AGREGAR PRODUCTO] ${e.message}")
         }
+    }
+    val listaDefinitiva: List<Producto> = productosValidos.also {
+        println("\nSe registraron exitosamente ${productosValidos.count()} productos en el pedido.")
     }
     val bebidasAlcoholicas = listaDefinitiva
         .filter { it is Bebida && it.esAlcoholica }
