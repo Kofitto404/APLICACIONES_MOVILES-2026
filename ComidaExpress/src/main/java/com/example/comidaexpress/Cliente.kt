@@ -1,6 +1,7 @@
 package com.example.comidaexpress
 
-class Cliente(
+data class Cliente(
     val nombre: String,
-    val direccion: String
+    val direccion: String,
+    val esClienteFrecuente: Boolean
 )

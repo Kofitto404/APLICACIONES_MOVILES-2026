@@ -2,9 +2,9 @@ package com.example.comidaexpress
 
 open class Producto(
     val nombre: String,
-    val precio_base: Double
+    val precioBase: Double
 ) {
-    open fun calcularPrecioFinal(){
-
+    open fun calcularPrecioFinal(): Double {
+        return precioBase
     }
 }

@@ -1,6 +1,6 @@
 package com.example.tareas
 
-// Creación de la Clase Base Persona
+// Creacion de la Clase Base Persona
 open class Persona(
     val nombre: String,
     val edad: Int
@@ -10,7 +10,7 @@ open class Persona(
     }
 }
 
-// Implementación de Herencia con la Clase Empleado
+// Implementacion de Herencia con la Clase Empleado
 
 class Empleado(
     nombre: String,
@@ -28,23 +28,23 @@ class Empleado(
     }
 }
 
-// Creación de Objetos y Verificación
+// Creacion de Objetos y Verificacion
 
 fun main() {
     val persona1 = Persona("Redsy Mapache", 21)
 
     val empleado1 = Empleado("Kofi Wah", 19, "FullStack Developer", 2020207.67)
 
-    println("--- Llama al método presentarse() en ambos objetos. ---")
+    println("--- Llama al metodo presentarse() en ambos objetos. ---")
     persona1.presentarse()
     empleado1.presentarse()
 }
 
 /*
-Pregunta de reflexión
-En un comentario en tu código, explica por qué la misma llamada al metodo presentarse()
+Pregunta de reflexion
+En un comentario en tu codigo, explica por que la misma llamada al metodo presentarse()
 puede generar dos resultados distintos.
-¿Qué concepto de la POO se está demostrando aquí? Argumenta con ejemplos
+¿Que concepto de la POO se esta demostrando aqui? Argumenta con ejemplos
 
 - Eeeeeeeee aunque el metodo presentarse() se llame igual tanto en la clase Persona como en la clase Empleado
   lo que permite generar 2 resultados distintos es el Override en el presentarse() de Empleado. Al usarse se puede

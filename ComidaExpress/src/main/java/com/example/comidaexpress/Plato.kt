@@ -1,15 +1,16 @@
 package com.example.comidaexpress
 
 class Plato(
-    nombre : String,
-    precio_base : Double,
-    var tamano_Porcion : String
-): Producto(nombre,precio_base){
-    override fun calcularPrecioFinal() {
-        if(tamano_Porcion.lowercase() == "grande"){
-            precio_base * 0.25
-        }else{
-            precio_base
+    nombre: String,
+    precioBase: Double,
+    val tamanoPorcion: String
+) : Producto(nombre, precioBase) {
+
+    override fun calcularPrecioFinal(): Double {
+        return if (tamanoPorcion.lowercase() == "grande") {
+            precioBase * 1.25
+        } else {
+            precioBase
         }
     }
 }

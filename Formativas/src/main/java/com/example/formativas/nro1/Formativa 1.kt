@@ -31,7 +31,7 @@ fun main() {
     val entradaVip1 = EntradaVip(3, "SAFE 2027", "Livelyapio", "24-02-2027 -> 28-05-2027", "Hotel Almacruz", 120.0, 6.7)
     listaEntradas.add(entradaVip1)
 
-    println("--- Llama al método mostrarDetalle() en ambos objetos. ---")
+    println("--- Llama al metodo mostrarDetalle() en ambos objetos. ---")
     for (item in listaEntradas){
         item.mostrarDetalle()
 

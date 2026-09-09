@@ -9,6 +9,7 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/Apuntes" />
             <option value="$PROJECT_DIR$/ComidaExpress" />
             <option value="$PROJECT_DIR$/Formativas" />
             <option value="$PROJECT_DIR$/Tareas" />
